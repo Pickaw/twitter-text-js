@@ -37,6 +37,8 @@ function _default(entity, text, options) {
     linkText = (0, _linkTextWithEntity["default"])(urlEntity, options);
   }
 
+  linkText = linkText.replace(/^(https:\/\/)/g, '')
+
   var attrs = (0, _clone["default"])(options.htmlAttrs || {});
 
   if (!url.match(_urlHasProtocol["default"])) {
