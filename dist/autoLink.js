@@ -18,7 +18,7 @@ var _autoLinkEntities = _interopRequireDefault(require("./autoLinkEntities"));
 // http://www.apache.org/licenses/LICENSE-2.0
 function _default(text, options) {
   var entities = (0, _extractEntitiesWithIndices["default"])(text, {
-    extractUrlsWithoutProtocol: false
+    extractUrlsWithoutProtocol: true
   });
   return (0, _autoLinkEntities["default"])(text, entities, options);
 }
